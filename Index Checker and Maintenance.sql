@@ -23,7 +23,7 @@ SET NOCOUNT ON;
 -- CONFIGURATION
 -------------------------------------------------------------------------------
 
-DECLARE @FragmentationThreshold DECIMAL(5,2) = 70.00;
+DECLARE @FragmentationThreshold DECIMAL(5,2) = 20.00;
 -- Change this later if needed, e.g. 30.00, 40.00, 60.00
 
 DECLARE @MinimumPageCount INT = 100;
@@ -33,7 +33,7 @@ DECLARE @ScanMode NVARCHAR(20) = N'SAMPLED';
 -- Options: LIMITED, SAMPLED, DETAILED
 -- SAMPLED is usually a sensible balance for larger environments
 
-DECLARE @ExecuteMaintenance BIT = 0;
+DECLARE @ExecuteMaintenance BIT = 1;
 -- 0 = Dry run/report only
 -- 1 = Actually rebuild indexes
 
